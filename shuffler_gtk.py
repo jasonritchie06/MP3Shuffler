@@ -30,7 +30,7 @@ class ShufflerWindow(Gtk.Window):
         notification.set_title("MP3 Shuffler is ready")
         notification.set_body("MP3 Shuffler is ready")
 
-        file = Gio.File.new_for_path(self.get_resource_path("org.flatpak.mp3shuffler24.png"))
+        file = Gio.File.new_for_path(self.get_resource_path("org.flatpak.mp3shuffler48.png"))
         icon = Gio.FileIcon(file=file)
 
         notification.set_icon(icon)
@@ -98,8 +98,7 @@ class ShufflerWindow(Gtk.Window):
         self.status = Gtk.Label()
         self.status.set_width_chars(80)
         self.status.set_halign(Gtk.Align.START)
-        self.status.set_justify(Gtk.Justification.LEFT)
-        self.status.set_alignment(0,0)
+        self.status.set_xalign(0)
         self.status.set_text("Ready to shuffle!")
         vbox.pack_start(self.status, False, False, 0)
 
