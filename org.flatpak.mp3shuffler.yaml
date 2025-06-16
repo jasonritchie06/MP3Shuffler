@@ -1,6 +1,6 @@
 id: org.flatpak.mp3shuffler
 runtime: org.gnome.Platform
-runtime-version: '45'
+runtime-version: '48'
 sdk: org.gnome.Platform
 command: shuffler_gtk.py
 
