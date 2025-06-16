@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=Utility
+Comment[en_US]=A graphical tool too shuffle mp3s to a target device
+Comment=A graphical tool too shuffle mp3s to a target device
+Exec=shuffler_gtk.py
+GenericName[en_US]=
+GenericName=
+Icon=io.github.jasonritchie06.mp3shuffler.png
+MimeType=
+Name[en_US]=MP3 Shuffler
+Name=MP3 Shuffler
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+SingleMainWindow=true
+X-GNOME-SingleWindow=true
+X-SingleMainWindow=true
