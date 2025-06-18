@@ -13,7 +13,7 @@
 <categories>
   <category>Utility</category>
 </categories>
-<icon type="remote">https://raw.githubusercontent.com/jasonritchie06/MP3Shuffler/refs/heads/main/images/io.github.jasonritchie06.mp3shuffler.png</icon>
+<icon type="remote">https://raw.githubusercontent.com/jasonritchie06/MP3Shuffler/dc084035267d1691b01ba6c17ae56e741c5df7d0/images/io.github.jasonritchie06.mp3shuffler.svg</icon>
 <screenshots>
   <screenshot type="default">
     <image>https://raw.githubusercontent.com/jasonritchie06/MP3Shuffler/refs/heads/main/images/screenshot1.png</image>
@@ -24,7 +24,7 @@
 <url type="homepage">https://github.com/jasonritchie06/MP3Shuffler/tree/main</url>
 <releases>
   <release version="1.0.0" date="2025-06-16">
-    <url type="details">https://github.com/jasonritchie06/MP3Shuffler#version_1.0.0</url>
+    <url type="details">https://github.com/jasonritchie06/MP3Shuffler#v1.0.1</url>
     <description>
       <p>Initial Release</p>
         <ul>
