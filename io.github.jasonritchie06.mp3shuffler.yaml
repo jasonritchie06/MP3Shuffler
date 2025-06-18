@@ -9,11 +9,6 @@ finish-args:
   - --socket=fallback-x11
   - --share=ipc
   - --filesystem=host
-  # File Manager
-  - --talk-name=org.freedesktop.FileManager1
-  # System tray icon
-  - --talk-name=org.freedesktop.Notifications
-  - --talk-name=org.kde.StatusNotifierWatcher
 
 modules:
 
@@ -28,14 +23,13 @@ modules:
       - mkdir -p /app/share/metainfo
       - mkdir -p /app/share/app-info/media
 
-      # - pip3 install --prefix=/app --no-deps .
       # Install python file
       - install -m 755 shuffler_gtk.py /app/bin/shuffler_gtk.py
-      #- install -m 644 io.github.jasonritchie06.mp3shuffler.png  /app/bin/io.github.jasonritchie06.mp3shuffler.png 
       # Install data files
       - install -m 644 io.github.jasonritchie06.mp3shuffler.desktop /app/share/applications/
       # Install icons
       - install -Dm 644 io.github.jasonritchie06.mp3shuffler.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
+      # install metainfo
       - install -m 644 io.github.jasonritchie06.mp3shuffler.metainfo.xml /app/share/metainfo/
       - install -Dm 644 screenshot1.png /app/share/app-info/media/
 
