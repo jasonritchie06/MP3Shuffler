@@ -8,6 +8,7 @@ Many bluetooth speakers that feature MP3 playback lack a shuffle function. MP3 S
 - Randomly copy MP3 files from the source to the target directory.
 - Progress bar to indicate the copying status.
 - Error handling for file copying issues.
+![Alt text](./images/screenshot1.png) 
 
 ## Requirements
 
@@ -19,7 +20,23 @@ To run this application, you need to have Python installed along with the follow
 
 ## Installation
 
-### Using Flatpak
+### Installing the pre-built flatpak
+
+1. Ensure you have Flatpak installed on your system.
+2. Download the mp3shuffler.flatpak file.
+3. Open a terminal to the downloaded file.
+4. Install with:
+   ```
+   flatpak install mp3shuffler.flatpak
+   ```
+5. Launch the application with:
+   
+   ```
+   flatpak run io.github.jasonritchie06.mp3shuffler
+   ```
+
+
+### Building the Flatpak
 
 1. Ensure you have Flatpak installed on your system.
 2. Navigate to the `flatpak` directory in your terminal.
@@ -65,6 +82,9 @@ If you prefer to run the application directly from the source:
 2. Select the source directory containing your MP3 files.
 3. Select the target directory where you want to copy the shuffled files.
 4. Click on the "Shuffle to Target" button to start the process.
+5. The Shuffler app can also be used to fill up an sdcard or music player with random songs by
+   pointing it at your music collection and shffuling random songs to the target device until it is full.
+
 
 ## License
 
