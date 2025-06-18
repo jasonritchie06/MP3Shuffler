@@ -27,7 +27,7 @@ class ShufflerWindow(Gtk.Window):
 
         # find the icon. Don't know if we are running in a flatpak or not, so check both locations
         self.icon_path = self.set_icon_from_file()
-        self.icon = GdkPixbuf.Pixbuf.new_from_file_at_size(self.icon_path, 128, 128)
+        self.icon = GdkPixbuf.Pixbuf.new_from_file_at_size(self.icon_path, 256, 256)
 
         notification = Gio.Notification()
         notification.set_title("MP3 Shuffler is ready")
@@ -113,12 +113,12 @@ class ShufflerWindow(Gtk.Window):
         app_path = os.path.dirname(os.path.abspath(__file__))
         base_dir = app_path.split(os.sep)[:-1]
         base_dir = os.sep.join(base_dir)
-        icon_path = os.path.join(base_dir, "images", "io.github.jasonritchie06.mp3shuffler.png")
+        icon_path = os.path.join(base_dir, "images", "io.github.jasonritchie06.mp3shuffler.svg")
         if os.path.exists(icon_path):
             return icon_path
 
-        elif os.path.exists("/app/share/icons/hicolor/128x128/apps/io.github.jasonritchie06.mp3shuffler.png"):
-            icon_path = "/app/share/icons/hicolor/128x128/apps/io.github.jasonritchie06.mp3shuffler.png"
+        elif os.path.exists("/app/share/icons/hicolor/256x256/apps/io.github.jasonritchie06.mp3shuffler.svg"):
+            icon_path = "/app/share/icons/hicolor/256x256/apps/io.github.jasonritchie06.mp3shuffler.svg"
             return icon_path
         else:
             return None
