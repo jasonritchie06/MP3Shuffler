@@ -19,37 +19,40 @@ modules:
       - mkdir -p /app/bin
       - mkdir -p /app/share/mp3shuffler
       - mkdir -p /app/share/applications
-      - mkdir -p /app/share/icons/hicolor/128x128/apps
+      - mkdir -p /app/share/icons/hicolor/scalable/apps/
       - mkdir -p /app/share/metainfo
       - mkdir -p /app/share/app-info/media
 
       # Install python file
-      - install -m 755 shuffler_gtk.py /app/bin/shuffler_gtk.py
+      - install -m 755 ./src/shuffler_gtk.py /app/bin/shuffler_gtk.py
       # Install data files
-      - install -m 644 io.github.jasonritchie06.mp3shuffler.desktop /app/share/applications/
-      # Install icons
-      - install -Dm 644 io.github.jasonritchie06.mp3shuffler.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
-      # install metainfo
-      - install -m 644 io.github.jasonritchie06.mp3shuffler.metainfo.xml /app/share/metainfo/
-      - install -Dm 644 screenshot1.png /app/share/app-info/media/
+      - install -m 644 ${FLATPAK_ID}.desktop /app/share/applications/
+      # Install icon
+      - install -Dm 644 ./images/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/
+      # Install metainfo
+      - install -m 644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/
+      - install -Dm 644 ./images/screenshot1.png /app/share/app-info/media/
 
     sources:
-      - type: file
-        path: ./src/shuffler_gtk.py
-        dest-filename: shuffler_gtk.py
+      # - type: file
+      #   path: ./src/shuffler_gtk.py
+      #   dest-filename: shuffler_gtk.py
 
-      - type: file
-        path: ./io.github.jasonritchie06.mp3shuffler.desktop
-        dest-filename: io.github.jasonritchie06.mp3shuffler.desktop
+      # - type: file
+      #   path: ./io.github.jasonritchie06.mp3shuffler.desktop
+      #   dest-filename: io.github.jasonritchie06.mp3shuffler.desktop
 
-      - type: file
-        path: ./images/io.github.jasonritchie06.mp3shuffler.png
-        dest-filename: io.github.jasonritchie06.mp3shuffler.png
+      # - type: file
+      #   path: ./images/io.github.jasonritchie06.mp3shuffler.png
+      #   dest-filename: io.github.jasonritchie06.mp3shuffler.png
 
-      - type: file
-        path: ./io.github.jasonritchie06.mp3shuffler.metainfo.xml
-        dest-filename: io.github.jasonritchie06.mp3shuffler.metainfo.xml
+      # - type: file
+      #   path: ./io.github.jasonritchie06.mp3shuffler.metainfo.xml
+      #   dest-filename: io.github.jasonritchie06.mp3shuffler.metainfo.xml
 
-      - type: file
-        path: ./images/screenshot1.png
-        dest-filename: screenshot1.png 
+      # - type: file
+      #   path: ./images/screenshot1.png
+      #   dest-filename: screenshot1.png 
+        - type: git
+          url: https://github.com/jasonritchie06/MP3Shuffler.git
+          tag: v1.0.2
