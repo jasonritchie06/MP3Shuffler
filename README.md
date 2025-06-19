@@ -1,3 +1,4 @@
+![Alt text](./images/screenshot1.png) 
 # MP3 Shuffler
 
 Many bluetooth speakers that feature MP3 playback lack a shuffle function. MP3 Shuffler is a simple application that allows users to randomly shuffle and copy MP3 files from a source directory to a target device or directory. MP3 shuffler shuffles the files in addition to copying randomly as some players play by sorted file date instead of filename. You could also point MP3Shuffler at your music library and let it fill your music player or sdcard to capacity with random songs. The application features a user-friendly graphical interface built with the Gtk 3.0 framework.
@@ -8,16 +9,15 @@ Many bluetooth speakers that feature MP3 playback lack a shuffle function. MP3 S
 - Randomly copy MP3 files from the source to the target directory.
 - Progress bar to indicate the copying status.
 - Error handling for file copying issues.
-![Alt text](./images/screenshot1.png) 
 
 ## Requirements
 
-To run this application, you need to have Python installed along with the following dependencies:
+To run this application from source, you need to have Python 3.8 or better installed along with the following dependencies:
 
 - Gtk libraries (included on Gnome desktops)
-- At least Python 3.8
-- Other dependencies listed in `requirements.txt`
+- PyGObject
 
+To run this application from flaptpak, you only need flatpak installed. Flatpak will install all required runtimes.
 ## Installation
 
 ### Installing the pre-built flatpak
